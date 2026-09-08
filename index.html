@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>YANN GOLDEN AGENCY | Grand-Bassam</title>
+
   <meta
     name="description"
     content="YANN GOLDEN AGENCY — Property, rental, agency services and job opportunities in Grand-Bassam, Côte d'Ivoire."
   >
+
   <style>
     * {
       margin: 0;
@@ -52,7 +55,7 @@
       top: 0;
       z-index: 1000;
       background: var(--dark);
-      padding: 12px 20px;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -62,27 +65,62 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
+      min-width: 0;
     }
 
-    /*
-      When you get the logo later, put it beside index.html
-      and name it logo.png.
-    */
+    /* LOGO */
+
+    .brand-logo-wrapper {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.15);
+    }
 
     .brand-logo {
-      width: 46px;
-      height: 46px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      border-radius: 50%;
-      background: white;
+      display: block;
+    }
+
+    /* Fallback logo if logo.png cannot load */
+
+    .logo-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
 
     .brand-name {
       color: var(--gold-light);
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
       letter-spacing: 1px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-location {
+      color: #aeb8c5;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
     }
 
     .menu-btn {
@@ -92,6 +130,7 @@
       font-size: 28px;
       cursor: pointer;
       line-height: 1;
+      padding: 5px;
     }
 
     .nav-links {
@@ -127,6 +166,7 @@
 
     .hero {
       min-height: 85vh;
+
       background:
         linear-gradient(
           rgba(13, 23, 38, 0.86),
@@ -137,6 +177,7 @@
           #1b304a,
           #0d1726
         );
+
       display: flex;
       align-items: center;
       padding: 60px 22px;
@@ -256,6 +297,12 @@
       border: 1px solid var(--border);
       box-shadow:
         0 6px 22px rgba(0,0,0,0.05);
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,162,39,0.45);
     }
 
     .service-number {
@@ -298,6 +345,12 @@
       border: 1px solid var(--border);
       box-shadow:
         0 6px 20px rgba(0,0,0,0.05);
+      transition: 0.2s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,162,39,0.45);
     }
 
     .job-badge {
@@ -435,8 +488,18 @@
     ========================== */
 
     @media (min-width: 768px) {
+
       .navbar {
-        padding: 14px 60px;
+        padding: 12px 60px;
+      }
+
+      .brand-logo-wrapper {
+        width: 54px;
+        height: 54px;
+      }
+
+      .brand-name {
+        font-size: 18px;
       }
 
       .menu-btn {
@@ -479,6 +542,34 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
+    /* =========================
+       SMALL PHONES
+    ========================== */
+
+    @media (max-width: 380px) {
+
+      .navbar {
+        padding: 9px 12px;
+      }
+
+      .brand-logo-wrapper {
+        width: 45px;
+        height: 45px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-location {
+        font-size: 8px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
 
@@ -489,17 +580,38 @@
   ========================== -->
 
   <nav class="navbar">
-    <div class="brand">
-      <img
-        src="logo.png"
-        alt="YANN GOLDEN AGENCY Logo"
-        class="brand-logo"
-      >
 
-      <div class="brand-name">
-        YANN GOLDEN
+    <div class="brand">
+
+      <div class="brand-logo-wrapper">
+
+        <img
+          src="logo.png"
+          alt="YANN GOLDEN AGENCY Logo"
+          class="brand-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+
+        <div class="logo-fallback">
+          YG
+        </div>
+
       </div>
+
+      <div>
+
+        <div class="brand-name">
+          YANN GOLDEN
+        </div>
+
+        <div class="brand-location">
+          Grand-Bassam
+        </div>
+
+      </div>
+
     </div>
+
 
     <button
       class="menu-btn"
@@ -510,21 +622,32 @@
       ☰
     </button>
 
+
     <div class="nav-links" id="navLinks">
+
       <a href="#home">Home</a>
+
       <a href="#services">Services</a>
+
       <a href="#rental">Rental</a>
+
       <a href="#jobs">Jobs</a>
+
       <a href="#about">About</a>
+
       <a href="#contact">Contact</a>
+
     </div>
+
   </nav>
+
 
   <!-- =========================
        HERO
   ========================== -->
 
   <header class="hero" id="home">
+
     <div class="hero-content">
 
       <div class="hero-label">
@@ -562,8 +685,11 @@
         </a>
 
       </div>
+
     </div>
+
   </header>
+
 
   <!-- =========================
        SERVICES
@@ -592,6 +718,7 @@
 
     </div>
 
+
     <div class="service-grid">
 
       <div class="service-card">
@@ -612,6 +739,7 @@
 
       </div>
 
+
       <div class="service-card">
 
         <div class="service-number">
@@ -628,6 +756,7 @@
         </p>
 
       </div>
+
 
       <div class="service-card">
 
@@ -647,7 +776,9 @@
       </div>
 
     </div>
+
   </section>
+
 
   <!-- =========================
        JOBS
@@ -675,7 +806,9 @@
 
     </div>
 
+
     <div class="jobs-grid">
+
 
       <!-- WASHER -->
 
@@ -705,6 +838,7 @@
         </a>
 
       </div>
+
 
       <!-- HOUSEMAID -->
 
@@ -736,6 +870,7 @@
 
       </div>
 
+
       <!-- BABY KEEPER -->
 
       <div class="job-card">
@@ -766,7 +901,9 @@
       </div>
 
     </div>
+
   </section>
+
 
   <!-- =========================
        ABOUT
@@ -797,7 +934,9 @@
       </p>
 
     </div>
+
   </section>
+
 
   <!-- =========================
        RENTAL
@@ -825,6 +964,7 @@
       </p>
 
     </div>
+
 
     <div class="rental-box">
 
@@ -854,7 +994,9 @@
       </a>
 
     </div>
+
   </section>
+
 
   <!-- =========================
        CONTACT
@@ -883,6 +1025,7 @@
 
     </div>
 
+
     <div class="contact-buttons">
 
       <a
@@ -902,7 +1045,9 @@
       </a>
 
     </div>
+
   </section>
+
 
   <!-- =========================
        FOOTER
@@ -922,51 +1067,69 @@
 
   </footer>
 
+
   <!-- =========================
        JAVASCRIPT
   ========================== -->
 
   <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
 
-    menuBtn.addEventListener("click", function () {
+    const menuBtn =
+      document.getElementById("menuBtn");
 
-      navLinks.classList.toggle("active");
+    const navLinks =
+      document.getElementById("navLinks");
 
-      const isOpen =
-        navLinks.classList.contains("active");
 
-      menuBtn.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
+    menuBtn.addEventListener(
+      "click",
+      function () {
 
-      menuBtn.textContent =
-        isOpen ? "✕" : "☰";
-    });
+        navLinks.classList.toggle("active");
+
+        const isOpen =
+          navLinks.classList.contains("active");
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuBtn.textContent =
+          isOpen ? "✕" : "☰";
+
+      }
+    );
+
 
     /* Close mobile menu after clicking a link */
 
     const links =
       navLinks.querySelectorAll("a");
 
-    links.forEach(function (link) {
 
-      link.addEventListener("click", function () {
+    links.forEach(
+      function (link) {
 
-        navLinks.classList.remove("active");
+        link.addEventListener(
+          "click",
+          function () {
 
-        menuBtn.setAttribute(
-          "aria-expanded",
-          "false"
+            navLinks.classList.remove("active");
+
+            menuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuBtn.textContent = "☰";
+
+          }
         );
 
-        menuBtn.textContent = "☰";
+      }
+    );
 
-      });
-
-    });
   </script>
 
 </body>
