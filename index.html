@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YANG GOLDEN AGENCY | Grand-Bassam</title>
+  <title>YANN GOLDEN AGENCY | Grand-Bassam</title>
   <meta
     name="description"
-    content="YANG GOLDEN AGENCY — Property, rental, agency services and job opportunities in Grand-Bassam, Côte d'Ivoire."
+    content="YANN GOLDEN AGENCY — Property, rental, agency services and job opportunities in Grand-Bassam, Côte d'Ivoire."
   >
   <style>
     * {
@@ -14,6 +14,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     :root {
       --gold: #c9a227;
       --gold-light: #e6c75a;
@@ -25,22 +26,27 @@
       --muted: #707070;
       --border: #e8e8e8;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--white);
       color: var(--text);
       line-height: 1.6;
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
     /* =========================
        NAVIGATION
     ========================== */
+
     .navbar {
       position: sticky;
       top: 0;
@@ -52,15 +58,18 @@
       justify-content: space-between;
       box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     }
+
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     /*
       When you get the logo later, put it beside index.html
       and name it logo.png.
     */
+
     .brand-logo {
       width: 46px;
       height: 46px;
@@ -68,12 +77,14 @@
       border-radius: 50%;
       background: white;
     }
+
     .brand-name {
       color: var(--gold-light);
       font-size: 18px;
       font-weight: 800;
       letter-spacing: 1px;
     }
+
     .menu-btn {
       background: none;
       border: none;
@@ -82,6 +93,7 @@
       cursor: pointer;
       line-height: 1;
     }
+
     .nav-links {
       display: none;
       position: absolute;
@@ -92,9 +104,11 @@
       padding: 15px 20px 20px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
+
     .nav-links.active {
       display: block;
     }
+
     .nav-links a {
       display: block;
       color: white;
@@ -102,12 +116,15 @@
       border-bottom: 1px solid rgba(255,255,255,0.08);
       font-weight: 600;
     }
+
     .nav-links a:hover {
       color: var(--gold-light);
     }
+
     /* =========================
        HERO
     ========================== */
+
     .hero {
       min-height: 85vh;
       background:
@@ -124,9 +141,11 @@
       align-items: center;
       padding: 60px 22px;
     }
+
     .hero-content {
       max-width: 720px;
     }
+
     .hero-label {
       color: var(--gold-light);
       font-size: 13px;
@@ -135,26 +154,31 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
+
     .hero h1 {
       color: white;
       font-size: 42px;
       line-height: 1.08;
       margin-bottom: 20px;
     }
+
     .hero h1 span {
       color: var(--gold-light);
     }
+
     .hero p {
       color: #e1e6ed;
       font-size: 17px;
       margin-bottom: 30px;
       max-width: 600px;
     }
+
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
+
     .btn {
       display: inline-block;
       padding: 14px 22px;
@@ -162,49 +186,61 @@
       font-weight: bold;
       transition: 0.2s ease;
     }
+
     .btn-primary {
       background: var(--gold);
       color: var(--dark);
     }
+
     .btn-secondary {
       border: 1px solid var(--gold);
       color: white;
     }
+
     .btn:hover {
       transform: translateY(-2px);
     }
+
     /* =========================
        GENERAL SECTIONS
     ========================== */
+
     section {
       padding: 70px 22px;
     }
+
     .section-title {
       text-align: center;
       margin-bottom: 42px;
     }
+
     .section-title small {
       color: var(--gold);
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
+
     .section-title h2 {
       font-size: 30px;
       color: var(--dark);
       margin-top: 8px;
     }
+
     .section-title p {
       color: var(--muted);
       max-width: 620px;
       margin: 10px auto 0;
     }
+
     /* =========================
        SERVICES
     ========================== */
+
     .services {
       background: var(--light);
     }
+
     .service-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -212,6 +248,7 @@
       max-width: 1100px;
       margin: auto;
     }
+
     .service-card {
       background: white;
       padding: 30px 24px;
@@ -220,26 +257,32 @@
       box-shadow:
         0 6px 22px rgba(0,0,0,0.05);
     }
+
     .service-number {
       color: var(--gold);
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 12px;
     }
+
     .service-card h3 {
       color: var(--dark);
       font-size: 21px;
       margin-bottom: 10px;
     }
+
     .service-card p {
       color: var(--muted);
     }
+
     /* =========================
        JOBS
     ========================== */
+
     .jobs {
       background: white;
     }
+
     .jobs-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -247,6 +290,7 @@
       max-width: 1000px;
       margin: auto;
     }
+
     .job-card {
       background: white;
       padding: 25px;
@@ -255,6 +299,7 @@
       box-shadow:
         0 6px 20px rgba(0,0,0,0.05);
     }
+
     .job-badge {
       display: inline-block;
       background: rgba(201,162,39,0.12);
@@ -265,15 +310,18 @@
       border-radius: 20px;
       margin-bottom: 12px;
     }
+
     .job-card h3 {
       color: var(--dark);
       font-size: 21px;
       margin-bottom: 8px;
     }
+
     .job-card p {
       color: var(--muted);
       margin-bottom: 18px;
     }
+
     .job-apply {
       display: inline-block;
       background: var(--dark);
@@ -283,35 +331,44 @@
       font-weight: bold;
       font-size: 14px;
     }
+
     .job-apply:hover {
       background: var(--gold);
       color: var(--dark);
     }
+
     /* =========================
        ABOUT
     ========================== */
+
     .about {
       max-width: 900px;
       margin: auto;
       text-align: center;
     }
+
     .about p {
       color: var(--muted);
       font-size: 17px;
     }
+
     /* =========================
        RENTAL
     ========================== */
+
     .rental {
       background: var(--dark);
       color: white;
     }
+
     .rental .section-title h2 {
       color: white;
     }
+
     .rental .section-title p {
       color: #cbd2dc;
     }
+
     .rental-box {
       max-width: 800px;
       margin: auto;
@@ -320,25 +377,31 @@
       padding: 32px 24px;
       text-align: center;
     }
+
     .rental-box h3 {
       color: var(--gold-light);
       margin-bottom: 10px;
     }
+
     .rental-price {
       font-size: 30px;
       font-weight: bold;
       margin: 15px 0;
     }
+
     .rental-note {
       color: #b9c1cc;
       font-size: 14px;
     }
+
     /* =========================
        CONTACT
     ========================== */
+
     .contact {
       text-align: center;
     }
+
     .contact-buttons {
       display: flex;
       justify-content: center;
@@ -346,12 +409,15 @@
       gap: 12px;
       margin-top: 25px;
     }
+
     .contact .btn-secondary {
       color: var(--dark);
     }
+
     /* =========================
        FOOTER
     ========================== */
+
     footer {
       background: #080f19;
       color: #9fa8b5;
@@ -359,19 +425,24 @@
       padding: 30px 20px;
       font-size: 14px;
     }
+
     footer strong {
       color: var(--gold-light);
     }
+
     /* =========================
        DESKTOP
     ========================== */
+
     @media (min-width: 768px) {
       .navbar {
         padding: 14px 60px;
       }
+
       .menu-btn {
         display: none;
       }
+
       .nav-links {
         display: flex;
         position: static;
@@ -381,44 +452,55 @@
         box-shadow: none;
         gap: 25px;
       }
+
       .nav-links a {
         border: none;
         padding: 0;
         font-size: 14px;
       }
+
       .hero {
         padding: 90px 60px;
       }
+
       .hero h1 {
         font-size: 64px;
       }
+
       section {
         padding: 90px 60px;
       }
+
       .service-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+
       .jobs-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
   </style>
 </head>
+
 <body>
+
   <!-- =========================
        NAVIGATION
   ========================== -->
+
   <nav class="navbar">
     <div class="brand">
       <img
         src="logo.png"
-        alt="YANG GOLDEN AGENCY Logo"
+        alt="YANN GOLDEN AGENCY Logo"
         class="brand-logo"
       >
+
       <div class="brand-name">
-        YANG GOLDEN
+        YANN GOLDEN
       </div>
     </div>
+
     <button
       class="menu-btn"
       id="menuBtn"
@@ -427,6 +509,7 @@
     >
       ☰
     </button>
+
     <div class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
@@ -436,31 +519,39 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
+
   <!-- =========================
        HERO
   ========================== -->
+
   <header class="hero" id="home">
     <div class="hero-content">
+
       <div class="hero-label">
         Grand-Bassam · Côte d'Ivoire
       </div>
+
       <h1>
         Your trusted partner for
         <span>property & more.</span>
       </h1>
+
       <p>
-        Welcome to YANG GOLDEN AGENCY.
+        Welcome to YANN GOLDEN AGENCY.
         Discover professional services designed
         to make your property, rental and agency
         needs easier.
       </p>
+
       <div class="hero-buttons">
+
         <a
           href="#services"
           class="btn btn-primary"
         >
           Explore Services
         </a>
+
         <a
           href="https://wa.me/2250749382707"
           class="btn btn-secondary"
@@ -469,244 +560,331 @@
         >
           WhatsApp Us
         </a>
+
       </div>
     </div>
   </header>
+
   <!-- =========================
        SERVICES
   ========================== -->
+
   <section
     class="services"
     id="services"
   >
+
     <div class="section-title">
+
       <small>
         What We Offer
       </small>
+
       <h2>
         Our 3-in-1 Services
       </h2>
+
       <p>
         One agency, multiple solutions.
         More official information will be added
         as the business details are confirmed.
       </p>
+
     </div>
+
     <div class="service-grid">
+
       <div class="service-card">
+
         <div class="service-number">
           01
         </div>
+
         <h3>
           Property
         </h3>
+
         <p>
           Property-related opportunities and
           services available through
-          YANG GOLDEN AGENCY.
+          YANN GOLDEN AGENCY.
         </p>
+
       </div>
+
       <div class="service-card">
+
         <div class="service-number">
           02
         </div>
+
         <h3>
           Rental
         </h3>
+
         <p>
           Rental opportunities in Grand-Bassam
           and surrounding areas.
         </p>
+
       </div>
+
       <div class="service-card">
+
         <div class="service-number">
           03
         </div>
+
         <h3>
           Agency Services
         </h3>
+
         <p>
           Professional agency services designed
           to help clients find the right solution.
         </p>
+
       </div>
+
     </div>
   </section>
+
   <!-- =========================
        JOBS
   ========================== -->
+
   <section
     class="jobs"
     id="jobs"
   >
+
     <div class="section-title">
+
       <small>
         Opportunities
       </small>
+
       <h2>
         Available Jobs
       </h2>
+
       <p>
         Current employment opportunities
-        available through YANG GOLDEN AGENCY.
+        available through YANN GOLDEN AGENCY.
       </p>
+
     </div>
+
     <div class="jobs-grid">
+
       <!-- WASHER -->
+
       <div class="job-card">
+
         <span class="job-badge">
           6 Positions Available
         </span>
+
         <h3>
           Washer
         </h3>
+
         <p>
           Washer positions are currently
           available. Contact the agency
           for more information.
         </p>
+
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANG%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Washer%20job."
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Washer%20job."
           class="job-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
           Apply on WhatsApp
         </a>
+
       </div>
+
       <!-- HOUSEMAID -->
+
       <div class="job-card">
+
         <span class="job-badge">
           Available
         </span>
+
         <h3>
           Housemaid
         </h3>
+
         <p>
           Housemaid opportunity available
-          through YANG GOLDEN AGENCY.
+          through YANN GOLDEN AGENCY.
           Contact us for requirements
           and details.
         </p>
+
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANG%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Housemaid%20job."
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Housemaid%20job."
           class="job-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
           Apply on WhatsApp
         </a>
+
       </div>
+
       <!-- BABY KEEPER -->
+
       <div class="job-card">
+
         <span class="job-badge">
           Available
         </span>
+
         <h3>
           Baby Keeper
         </h3>
+
         <p>
           Baby keeper opportunity available.
           Contact the agency for requirements
           and further information.
         </p>
+
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANG%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Baby%20Keeper%20job."
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Baby%20Keeper%20job."
           class="job-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
           Apply on WhatsApp
         </a>
+
       </div>
+
     </div>
   </section>
+
   <!-- =========================
        ABOUT
   ========================== -->
+
   <section id="about">
+
     <div class="about">
+
       <div class="section-title">
+
         <small>
           About Us
         </small>
+
         <h2>
-          YANG GOLDEN AGENCY
+          YANN GOLDEN AGENCY
         </h2>
+
       </div>
+
       <p>
-        YANG GOLDEN AGENCY is based in
+        YANN GOLDEN AGENCY is based in
         Grand-Bassam, Côte d'Ivoire.
         Our goal is to provide reliable,
         professional and convenient agency
         services for our clients.
       </p>
+
     </div>
   </section>
+
   <!-- =========================
        RENTAL
   ========================== -->
+
   <section
     class="rental"
     id="rental"
   >
+
     <div class="section-title">
+
       <small>
         Rental
       </small>
+
       <h2>
         Find Your Next Place
       </h2>
+
       <p>
         Rental information will be updated
         as soon as available properties and
         official prices are confirmed.
       </p>
+
     </div>
+
     <div class="rental-box">
+
       <h3>
         Rental Information
       </h3>
+
       <div class="rental-price">
         Coming Soon
       </div>
+
       <p class="rental-note">
-        Contact YANG GOLDEN AGENCY for
+        Contact YANN GOLDEN AGENCY for
         availability and current rental
         information.
       </p>
+
       <br>
+
       <a
-        href="https://wa.me/2250749382707?text=Hello%20YANG%20GOLDEN%20AGENCY%2C%20I%20would%20like%20to%20ask%20about%20rental%20properties."
+        href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20would%20like%20to%20ask%20about%20rental%20properties."
         class="btn btn-primary"
         target="_blank"
         rel="noopener noreferrer"
       >
         Ask About Rentals
       </a>
+
     </div>
   </section>
+
   <!-- =========================
        CONTACT
   ========================== -->
+
   <section
     class="contact"
     id="contact"
   >
+
     <div class="section-title">
+
       <small>
         Get In Touch
       </small>
+
       <h2>
         Let's Talk
       </h2>
+
       <p>
         Interested in a property, rental,
         agency service or job opportunity?
-        Contact YANG GOLDEN AGENCY.
+        Contact YANN GOLDEN AGENCY.
       </p>
+
     </div>
+
     <div class="contact-buttons">
+
       <a
         href="https://wa.me/2250749382707"
         class="btn btn-primary"
@@ -715,57 +893,81 @@
       >
         WhatsApp
       </a>
+
       <a
         href="tel:+2250749382707"
         class="btn btn-secondary"
       >
         Call Us
       </a>
+
     </div>
   </section>
+
   <!-- =========================
        FOOTER
   ========================== -->
+
   <footer>
+
     <p>
       © 2026
-      <strong>YANG GOLDEN AGENCY</strong>.
+      <strong>YANN GOLDEN AGENCY</strong>.
       All rights reserved.
     </p>
+
     <p>
       Grand-Bassam, Côte d'Ivoire
     </p>
+
   </footer>
+
   <!-- =========================
        JAVASCRIPT
   ========================== -->
+
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
+
     menuBtn.addEventListener("click", function () {
+
       navLinks.classList.toggle("active");
+
       const isOpen =
         navLinks.classList.contains("active");
+
       menuBtn.setAttribute(
         "aria-expanded",
         isOpen
       );
+
       menuBtn.textContent =
         isOpen ? "✕" : "☰";
     });
+
     /* Close mobile menu after clicking a link */
+
     const links =
       navLinks.querySelectorAll("a");
+
     links.forEach(function (link) {
+
       link.addEventListener("click", function () {
+
         navLinks.classList.remove("active");
+
         menuBtn.setAttribute(
           "aria-expanded",
           "false"
         );
+
         menuBtn.textContent = "☰";
+
       });
+
     });
   </script>
+
 </body>
 </html>
