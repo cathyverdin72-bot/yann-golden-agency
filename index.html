@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YANN GOLDEN AGENCY | Grand-Bassam</title>
+
+  <meta
+    name="description"
+    content="YANN GOLDEN AGENCY — Property, rental, dry cleaning, agency services and job opportunities in Grand-Bassam, Côte d'Ivoire."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #c9a227;
+      --gold-light: #e6c75a;
+      --dark: #0d1726;
+      --dark-2: #162337;
+      --white: #ffffff;
+      --light: #f7f7f5;
+      --text: #222222;
+      --muted: #707070;
+      --border: #e8e8e8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--dark);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .brand-logo-wrapper {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.15);
+    }
+
+    .brand-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .brand-name {
+      color: var(--gold-light);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-location {
+      color: #aeb8c5;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 5px;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: var(--dark);
+      padding: 15px 20px 20px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+      display: block;
+    }
+
+    .nav-links a {
+      display: block;
+      color: white;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 85vh;
+      background:
+        linear-gradient(
+          rgba(13, 23, 38, 0.86),
+          rgba(13, 23, 38, 0.86)
+        ),
+        linear-gradient(
+          135deg,
+          #1b304a,
+          #0d1726
+        );
+      display: flex;
+      align-items: center;
+      padding: 60px 22px;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero-label {
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 42px;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      color: #e1e6ed;
+      font-size: 17px;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--gold);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================== */
+
+    section {
+      padding: 70px 22px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title small {
+      color: var(--gold);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: var(--dark);
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 10px auto 0;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+      background: var(--light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.05);
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,162,39,0.45);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: var(--dark);
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    .service-action {
+      margin-top: 20px;
+    }
+
+    .service-action .btn {
+      font-size: 14px;
+      padding: 11px 17px;
+    }
+
+    /* =========================
+       PROPERTY & RENTAL
+    ========================== */
+
+    .property-rental {
+      background: white;
+    }
+
+    .property-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .property-card {
+      background: white;
+      padding: 28px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .property-card h3 {
+      color: var(--dark);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .property-card p {
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .availability {
+      display: inline-block;
+      background: rgba(201,162,39,0.12);
+      color: #9c7810;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 7px 12px;
+      border-radius: 20px;
+      margin-top: 12px;
+    }
+
+    .property-card .btn {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .rental-categories {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      max-width: 900px;
+      margin: 25px auto 0;
+    }
+
+    .rental-category {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .rental-category h4 {
+      color: var(--dark);
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .rental-category p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .rental-category .btn {
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+
+    /* =========================
+       DRY CLEANING
+    ========================== */
+
+    .dry-cleaning {
+      background: var(--light);
+    }
+
+    .dry-cleaning-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .dry-cleaning-box h3 {
+      color: var(--dark);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .dry-cleaning-box p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       JOBS
+    ========================== */
+
+    .jobs {
+      background: white;
+    }
+
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .job-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      transition: 0.2s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,162,39,0.45);
+    }
+
+    .job-badge {
+      display: inline-block;
+      background: rgba(201,162,39,0.12);
+      color: #9c7810;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .job-card h3 {
+      color: var(--dark);
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .job-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .job-apply {
+      display: inline-block;
+      background: var(--dark);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .job-apply:hover {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .contact .btn-secondary {
+      color: var(--dark);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #080f19;
+      color: #9fa8b5;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: var(--gold-light);
+    }
+
+    /* =========================
+       DESKTOP
+    ========================== */
+
+    @media (min-width: 768px) {
+
+      .navbar {
+        padding: 12px 60px;
+      }
+
+      .brand-logo-wrapper {
+        width: 54px;
+        height: 54px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        position: static;
+        width: auto;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        border: none;
+        padding: 0;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 90px 60px;
+      }
+
+      .hero h1 {
+        font-size: 64px;
+      }
+
+      section {
+        padding: 90px 60px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rental-categories {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* =========================
+       SMALL PHONES
+    ========================== */
+
+    @media (max-width: 380px) {
+
+      .navbar {
+        padding: 9px 12px;
+      }
+
+      .brand-logo-wrapper {
+        width: 45px;
+        height: 45px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-location {
+        font-size: 8px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav class="navbar">
+
+    <div class="brand">
+
+      <div class="brand-logo-wrapper">
+
+        <img
+          src="logo.png"
+          alt="YANN GOLDEN AGENCY Logo"
+          class="brand-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+
+        <div class="logo-fallback">
+          YG
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="brand-name">
+          YANN GOLDEN
+        </div>
+
+        <div class="brand-location">
+          Grand-Bassam
+        </div>
+
+      </div>
+
+    </div>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#property-rental">Property & Rental</a>
+      <a href="#dry-cleaning">Dry Cleaning</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="hero-label">
+        Grand-Bassam · Côte d'Ivoire
+      </div>
+
+      <h1>
+        Your trusted partner for
+        <span>property & more.</span>
+      </h1>
+
+      <p>
+        Welcome to YANN GOLDEN AGENCY.
+        Discover professional services designed
+        to make your property, rental, dry cleaning
+        and agency needs easier.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#services"
+          class="btn btn-primary"
+        >
+          Explore Services
+        </a>
+
+        <a
+          href="https://wa.me/2250749382707"
+          class="btn btn-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       3-IN-1 SERVICES
+  ========================== -->
+
+  <section
+    class="services"
+    id="services"
+  >
+
+    <div class="section-title">
+
+      <small>
+        What We Offer
+      </small>
+
+      <h2>
+        Our 3-in-1 Services
+      </h2>
+
+      <p>
+        One agency, multiple solutions.
+        Contact us directly for current
+        availability and information.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+      <!-- PROPERTY & RENTAL -->
+
+      <div class="service-card">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <h3>
+          Property & Rental
+        </h3>
+
+        <p>
+          Property opportunities and rental
+          solutions available through
+          YANN GOLDEN AGENCY.
+        </p>
+
+        <div class="service-action">
+
+          <a
+            href="#property-rental"
+            class="btn btn-primary"
+          >
+            Ask About Property & Rental
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- DRY CLEANING -->
+
+      <div class="service-card">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <h3>
+          Dry Cleaning
+        </h3>
+
+        <p>
+          Dry cleaning services designed
+          to make garment care easier
+          and more convenient.
+        </p>
+
+        <div class="service-action">
+
+          <a
+            href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20would%20like%20information%20about%20your%20Dry%20Cleaning%20service."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ask About Dry Cleaning
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- AGENCY & JOBS -->
+
+      <div class="service-card">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <h3>
+          Agency & Jobs
+        </h3>
+
+        <p>
+          Agency support and employment
+          opportunities available through
+          YANN GOLDEN AGENCY.
+        </p>
+
+        <div class="service-action">
+
+          <a
+            href="#jobs"
+            class="btn btn-primary"
+          >
+            View Opportunities
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROPERTY & RENTAL
+  ========================== -->
+
+  <section
+    class="property-rental"
+    id="property-rental"
+  >
+
+    <div class="section-title">
+
+      <small>
+        Property & Rental
+      </small>
+
+      <h2>
+        Available Opportunities
+      </h2>
+
+      <p>
+        Current availability is shown below.
+        Contact us directly for the latest
+        information, prices and details.
+      </p>
+
+    </div>
+
+
+    <div class="property-grid">
+
+
+      <!-- PROPERTIES -->
+
+      <div class="property-card">
+
+        <h3>
+          Properties
+        </h3>
+
+        <p>
+          Property opportunities currently
+          available through the agency.
+        </p>
+
+        <span class="availability">
+          3 Properties Available
+        </span>
+
+        <br>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%203%20available%20properties."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask About Properties
+        </a>
+
+      </div>
+
+
+      <!-- RENTALS -->
+
+      <div class="property-card">
+
+        <h3>
+          Rental Houses
+        </h3>
+
+        <p>
+          Rental opportunities currently
+          available through the agency.
+        </p>
+
+        <span class="availability">
+          10 Rentals Available
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- RENTAL CATEGORIES -->
+
+    <div
+      class="section-title"
+      style="margin-top: 55px; margin-bottom: 25px;"
+    >
+
+      <small>
+        Rental Categories
+      </small>
+
+      <h2>
+        What Are You Looking For?
+      </h2>
+
+      <p>
+        Contact us directly for current
+        availability and rental details.
+      </p>
+
+    </div>
+
+
+    <div class="rental-categories">
+
+
+      <!-- STUDIO -->
+
+      <div class="rental-category">
+
+        <h4>
+          Studio
+        </h4>
+
+        <p>
+          Rental availability
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%20Studio%20for%20rent."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp
+        </a>
+
+      </div>
+
+
+      <!-- ROOM -->
+
+      <div class="rental-category">
+
+        <h4>
+          Room
+        </h4>
+
+        <p>
+          Rental availability
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%20Room%20for%20rent."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp
+        </a>
+
+      </div>
+
+
+      <!-- 2 BEDROOMS -->
+
+      <div class="rental-category">
+
+        <h4>
+          2 Bedrooms
+        </h4>
+
+        <p>
+          Rental availability
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%202-bedroom%20house%20for%20rent."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp
+        </a>
+
+      </div>
+
+
+      <!-- 3 BEDROOMS -->
+
+      <div class="rental-category">
+
+        <h4>
+          3 Bedrooms
+        </h4>
+
+        <p>
+          Rental availability
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%203-bedroom%20house%20for%20rent."
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DRY CLEANING
+  ========================== -->
+
+  <section
+    class="dry-cleaning"
+    id="dry-cleaning"
+  >
+
+    <div class="section-title">
+
+      <small>
+        Service 02
+      </small>
+
+      <h2>
+        Dry Cleaning
+      </h2>
+
+      <p>
+        Professional dry cleaning information
+        will be provided as services and
+        availability are confirmed.
+      </p>
+
+    </div>
+
+
+    <div class="dry-cleaning-box">
+
+      <h3>
+        Dry Cleaning Service
+      </h3>
+
+      <p>
+        Interested in our dry cleaning service?
+        Contact YANN GOLDEN AGENCY directly
+        for current information.
+      </p>
+
+      <a
+        href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20would%20like%20information%20about%20Dry%20Cleaning."
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ask About Dry Cleaning
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       JOBS
+  ========================== -->
+
+  <section
+    class="jobs"
+    id="jobs"
+  >
+
+    <div class="section-title">
+
+      <small>
+        Opportunities
+      </small>
+
+      <h2>
+        Available Jobs
+      </h2>
+
+      <p>
+        Current employment opportunities
+        available through YANN GOLDEN AGENCY.
+      </p>
+
+    </div>
+
+
+    <div class="jobs-grid">
+
+
+      <!-- WASHER -->
+
+      <div class="job-card">
+
+        <span class="job-badge">
+          6 Positions Available
+        </span>
+
+        <h3>
+          Washer
+        </h3>
+
+        <p>
+          Washer positions are currently
+          available. Contact the agency
+          for more information.
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Washer%20job."
+          class="job-apply"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apply on WhatsApp
+        </a>
+
+      </div>
+
+
+      <!-- HOUSEMAID -->
+
+      <div class="job-card">
+
+        <span class="job-badge">
+          Available
+        </span>
+
+        <h3>
+          Housemaid
+        </h3>
+
+        <p>
+          Housemaid opportunity available
+          through YANN GOLDEN AGENCY.
+          Contact us for requirements
+          and details.
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Housemaid%20job."
+          class="job-apply"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apply on WhatsApp
+        </a>
+
+      </div>
+
+
+      <!-- BABY KEEPER -->
+
+      <div class="job-card">
+
+        <span class="job-badge">
+          Available
+        </span>
+
+        <h3>
+          Baby Keeper
+        </h3>
+
+        <p>
+          Baby keeper opportunity available.
+          Contact the agency for requirements
+          and further information.
+        </p>
+
+        <a
+          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Baby%20Keeper%20job."
+          class="job-apply"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apply on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section id="about">
+
+    <div class="about">
+
+      <div class="section-title">
+
+        <small>
+          About Us
+        </small>
+
+        <h2>
+          YANN GOLDEN AGENCY
+        </h2>
+
+      </div>
+
+      <p>
+        YANN GOLDEN AGENCY is based in
+        Grand-Bassam, Côte d'Ivoire.
+        Our goal is to provide reliable,
+        professional and convenient agency
+        services for our clients.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section
+    class="contact"
+    id="contact"
+  >
+
+    <div class="section-title">
+
+      <small>
+        Get In Touch
+      </small>
+
+      <h2>
+        Let's Talk
+      </h2>
+
+      <p>
+        Interested in a property, rental,
+        dry cleaning service, agency service
+        or job opportunity?
+        Contact YANN GOLDEN AGENCY.
+      </p>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+      <a
+        href="https://wa.me/2250749382707"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
+
+      <a
+        href="tel:+2250749382707"
+        class="btn btn-secondary"
+      >
+        Call Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2026
+      <strong>YANN GOLDEN AGENCY</strong>.
+      All rights reserved.
+    </p>
+
+    <p>
+      Grand-Bassam, Côte d'Ivoire
+    </p>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener(
+      "click",
+      function () {
+
+        navLinks.classList.toggle("active");
+
+        const isOpen =
+          navLinks.classList.contains("active");
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuBtn.textContent =
+          isOpen ? "✕" : "☰";
+
+      }
+    );
+
+
+    const links =
+      navLinks.querySelectorAll("a");
+
+
+    links.forEach(
+      function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navLinks.classList.remove("active");
+
+            menuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuBtn.textContent = "☰";
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
