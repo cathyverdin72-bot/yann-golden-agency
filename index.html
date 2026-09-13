@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="YANN GOLDEN AGENCY — Property, rental, dry cleaning, agency services and job opportunities in Grand-Bassam, Côte d'Ivoire."
+    content="YANN GOLDEN AGENCY — Immobilier, location, services d'agence et opportunités d'emploi à Grand-Bassam, Côte d'Ivoire."
   >
 
   <style>
@@ -55,7 +55,7 @@
       top: 0;
       z-index: 1000;
       background: var(--dark);
-      padding: 10px 18px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -65,58 +65,22 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 11px;
-      min-width: 0;
-    }
-
-    .brand-logo-wrapper {
-      width: 50px;
-      height: 50px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 2px solid var(--gold);
-      box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.15);
+      gap: 10px;
     }
 
     .brand-logo {
-      width: 100%;
-      height: 100%;
+      width: 46px;
+      height: 46px;
       object-fit: contain;
-      display: block;
-    }
-
-    .logo-fallback {
-      display: none;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 17px;
-      font-weight: 900;
-      letter-spacing: -1px;
+      border-radius: 50%;
+      background: white;
     }
 
     .brand-name {
       color: var(--gold-light);
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: 1px;
-      line-height: 1.1;
-      white-space: nowrap;
-    }
-
-    .brand-location {
-      color: #aeb8c5;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 3px;
     }
 
     .menu-btn {
@@ -126,7 +90,6 @@
       font-size: 28px;
       cursor: pointer;
       line-height: 1;
-      padding: 5px;
     }
 
     .nav-links {
@@ -172,6 +135,7 @@
           #1b304a,
           #0d1726
         );
+
       display: flex;
       align-items: center;
       padding: 60px 22px;
@@ -289,13 +253,8 @@
       padding: 30px 24px;
       border-radius: 12px;
       border: 1px solid var(--border);
-      box-shadow: 0 6px 22px rgba(0,0,0,0.05);
-      transition: 0.2s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(201,162,39,0.45);
+      box-shadow:
+        0 6px 22px rgba(0,0,0,0.05);
     }
 
     .service-number {
@@ -315,128 +274,89 @@
       color: var(--muted);
     }
 
-    .service-action {
-      margin-top: 20px;
-    }
-
-    .service-action .btn {
-      font-size: 14px;
-      padding: 11px 17px;
-    }
-
     /* =========================
-       PROPERTY & RENTAL
+       NOUNOUS & MÉNAGE
     ========================== */
 
-    .property-rental {
-      background: white;
+    .nannies {
+      background: var(--light);
     }
 
-    .property-grid {
+    .nanny-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
-      max-width: 1000px;
+      gap: 18px;
+      max-width: 1100px;
       margin: auto;
     }
 
-    .property-card {
+    .nanny-card {
       background: white;
-      padding: 28px 24px;
+      padding: 25px;
       border-radius: 12px;
       border: 1px solid var(--border);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      text-align: center;
+      box-shadow:
+        0 6px 20px rgba(0,0,0,0.05);
     }
 
-    .property-card h3 {
-      color: var(--dark);
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .property-card p {
-      color: var(--muted);
-      margin-bottom: 5px;
-    }
-
-    .availability {
+    .nanny-badge {
       display: inline-block;
       background: rgba(201,162,39,0.12);
       color: #9c7810;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
-      padding: 7px 12px;
+      padding: 5px 10px;
       border-radius: 20px;
-      margin-top: 12px;
-    }
-
-    .property-card .btn {
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .rental-categories {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-      max-width: 900px;
-      margin: 25px auto 0;
-    }
-
-    .rental-category {
-      background: var(--light);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .rental-category h4 {
-      color: var(--dark);
-      font-size: 18px;
-      margin-bottom: 6px;
-    }
-
-    .rental-category p {
-      color: var(--muted);
-      font-size: 14px;
       margin-bottom: 12px;
     }
 
-    .rental-category .btn {
-      font-size: 13px;
-      padding: 10px 15px;
-    }
-
-    /* =========================
-       DRY CLEANING
-    ========================== */
-
-    .dry-cleaning {
-      background: var(--light);
-    }
-
-    .dry-cleaning-box {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px 24px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-    }
-
-    .dry-cleaning-box h3 {
+    .nanny-card h3 {
       color: var(--dark);
-      font-size: 24px;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .nanny-location {
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .nanny-price {
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--dark);
+      margin: 12px 0;
+    }
+
+    .nanny-card p {
+      color: var(--muted);
       margin-bottom: 10px;
     }
 
-    .dry-cleaning-box p {
+    .nanny-details {
+      margin: 15px 0 20px;
+      padding-left: 18px;
       color: var(--muted);
-      margin-bottom: 20px;
+    }
+
+    .nanny-details li {
+      margin-bottom: 6px;
+    }
+
+    .nanny-apply {
+      display: inline-block;
+      background: var(--dark);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nanny-apply:hover {
+      background: var(--gold);
+      color: var(--dark);
     }
 
     /* =========================
@@ -460,13 +380,8 @@
       padding: 25px;
       border-radius: 12px;
       border: 1px solid var(--border);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      transition: 0.2s ease;
-    }
-
-    .job-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(201,162,39,0.45);
+      box-shadow:
+        0 6px 20px rgba(0,0,0,0.05);
     }
 
     .job-badge {
@@ -522,6 +437,48 @@
     }
 
     /* =========================
+       RENTAL
+    ========================== */
+
+    .rental {
+      background: var(--dark);
+      color: white;
+    }
+
+    .rental .section-title h2 {
+      color: white;
+    }
+
+    .rental .section-title p {
+      color: #cbd2dc;
+    }
+
+    .rental-box {
+      max-width: 800px;
+      margin: auto;
+      border: 1px solid rgba(201,162,39,0.45);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .rental-box h3 {
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .rental-price {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .rental-note {
+      color: #b9c1cc;
+      font-size: 14px;
+    }
+
+    /* =========================
        CONTACT
     ========================== */
 
@@ -564,16 +521,7 @@
     @media (min-width: 768px) {
 
       .navbar {
-        padding: 12px 60px;
-      }
-
-      .brand-logo-wrapper {
-        width: 54px;
-        height: 54px;
-      }
-
-      .brand-name {
-        font-size: 18px;
+        padding: 14px 60px;
       }
 
       .menu-btn {
@@ -612,44 +560,12 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .property-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .rental-categories {
-        grid-template-columns: repeat(4, 1fr);
+      .nanny-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .jobs-grid {
         grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    /* =========================
-       SMALL PHONES
-    ========================== */
-
-    @media (max-width: 380px) {
-
-      .navbar {
-        padding: 9px 12px;
-      }
-
-      .brand-logo-wrapper {
-        width: 45px;
-        height: 45px;
-      }
-
-      .brand-name {
-        font-size: 14px;
-      }
-
-      .brand-location {
-        font-size: 8px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
       }
     }
   </style>
@@ -665,31 +581,14 @@
 
     <div class="brand">
 
-      <div class="brand-logo-wrapper">
+      <img
+        src="logo.png"
+        alt="Logo YANN GOLDEN AGENCY"
+        class="brand-logo"
+      >
 
-        <img
-          src="logo.png"
-          alt="YANN GOLDEN AGENCY Logo"
-          class="brand-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
-
-        <div class="logo-fallback">
-          YG
-        </div>
-
-      </div>
-
-      <div>
-
-        <div class="brand-name">
-          YANN GOLDEN
-        </div>
-
-        <div class="brand-location">
-          Grand-Bassam
-        </div>
-
+      <div class="brand-name">
+        YANN GOLDEN
       </div>
 
     </div>
@@ -697,7 +596,7 @@
     <button
       class="menu-btn"
       id="menuBtn"
-      aria-label="Open navigation menu"
+      aria-label="Ouvrir le menu"
       aria-expanded="false"
     >
       ☰
@@ -705,18 +604,17 @@
 
     <div class="nav-links" id="navLinks">
 
-      <a href="#home">Home</a>
+      <a href="#home">Accueil</a>
       <a href="#services">Services</a>
-      <a href="#property-rental">Property & Rental</a>
-      <a href="#dry-cleaning">Dry Cleaning</a>
-      <a href="#jobs">Jobs</a>
-      <a href="#about">About</a>
+      <a href="#nannies">Nounous & Ménage</a>
+      <a href="#rental">Location</a>
+      <a href="#jobs">Emplois</a>
+      <a href="#about">À propos</a>
       <a href="#contact">Contact</a>
 
     </div>
 
   </nav>
-
 
   <!-- =========================
        HERO
@@ -731,15 +629,15 @@
       </div>
 
       <h1>
-        Your trusted partner for
-        <span>property & more.</span>
+        Votre partenaire de confiance pour
+        <span>vos besoins.</span>
       </h1>
 
       <p>
-        Welcome to YANN GOLDEN AGENCY.
-        Discover professional services designed
-        to make your property, rental, dry cleaning
-        and agency needs easier.
+        Bienvenue chez YANN GOLDEN AGENCY.
+        Nous vous accompagnons dans vos besoins
+        immobiliers, locations, services d'agence
+        et opportunités d'emploi.
       </p>
 
       <div class="hero-buttons">
@@ -748,7 +646,7 @@
           href="#services"
           class="btn btn-primary"
         >
-          Explore Services
+          Découvrir nos services
         </a>
 
         <a
@@ -757,7 +655,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          WhatsApp Us
+          Nous contacter sur WhatsApp
         </a>
 
       </div>
@@ -766,9 +664,8 @@
 
   </header>
 
-
   <!-- =========================
-       3-IN-1 SERVICES
+       SERVICES
   ========================== -->
 
   <section
@@ -779,26 +676,21 @@
     <div class="section-title">
 
       <small>
-        What We Offer
+        Nos services
       </small>
 
       <h2>
-        Our 3-in-1 Services
+        Nos 3 services
       </h2>
 
       <p>
-        One agency, multiple solutions.
-        Contact us directly for current
-        availability and information.
+        Une agence, plusieurs solutions pour
+        répondre à vos besoins.
       </p>
 
     </div>
 
-
     <div class="service-grid">
-
-
-      <!-- PROPERTY & RENTAL -->
 
       <div class="service-card">
 
@@ -807,30 +699,16 @@
         </div>
 
         <h3>
-          Property & Rental
+          Immobilier
         </h3>
 
         <p>
-          Property opportunities and rental
-          solutions available through
+          Opportunités et services liés à
+          l'immobilier proposés par
           YANN GOLDEN AGENCY.
         </p>
 
-        <div class="service-action">
-
-          <a
-            href="#property-rental"
-            class="btn btn-primary"
-          >
-            Ask About Property & Rental
-          </a>
-
-        </div>
-
       </div>
-
-
-      <!-- DRY CLEANING -->
 
       <div class="service-card">
 
@@ -839,32 +717,15 @@
         </div>
 
         <h3>
-          Dry Cleaning
+          Location
         </h3>
 
         <p>
-          Dry cleaning services designed
-          to make garment care easier
-          and more convenient.
+          Opportunités de location à
+          Grand-Bassam et dans les environs.
         </p>
 
-        <div class="service-action">
-
-          <a
-            href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20would%20like%20information%20about%20your%20Dry%20Cleaning%20service."
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ask About Dry Cleaning
-          </a>
-
-        </div>
-
       </div>
-
-
-      <!-- AGENCY & JOBS -->
 
       <div class="service-card">
 
@@ -873,234 +734,161 @@
         </div>
 
         <h3>
-          Agency & Jobs
+          Services d'agence
         </h3>
 
         <p>
-          Agency support and employment
-          opportunities available through
-          YANN GOLDEN AGENCY.
+          Des services d'agence pour vous
+          aider à trouver la solution adaptée
+          à vos besoins.
         </p>
 
-        <div class="service-action">
+      </div>
 
-          <a
-            href="#jobs"
-            class="btn btn-primary"
-          >
-            View Opportunities
-          </a>
+    </div>
 
+  </section>
+
+  <!-- =========================
+       NOUNOUS & MÉNAGE
+  ========================== -->
+
+  <section
+    class="nannies"
+    id="nannies"
+  >
+
+    <div class="section-title">
+
+      <small>
+        Disponibilités
+      </small>
+
+      <h2>
+        Nounous & Ménage
+      </h2>
+
+      <p>
+        Découvrez les offres actuellement
+        disponibles à Grand-Bassam et dans
+        les environs.
+      </p>
+
+    </div>
+
+    <div class="nanny-grid">
+
+      <!-- MOCKEVILLE -->
+
+      <div class="nanny-card">
+
+        <span class="nanny-badge">
+          Disponible
+        </span>
+
+        <h3>
+          Nounou / Ménage
+        </h3>
+
+        <div class="nanny-location">
+          📍 Mockeville
         </div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       PROPERTY & RENTAL
-  ========================== -->
-
-  <section
-    class="property-rental"
-    id="property-rental"
-  >
-
-    <div class="section-title">
-
-      <small>
-        Property & Rental
-      </small>
-
-      <h2>
-        Available Opportunities
-      </h2>
-
-      <p>
-        Current availability is shown below.
-        Contact us directly for the latest
-        information, prices and details.
-      </p>
-
-    </div>
-
-
-    <div class="property-grid">
-
-
-      <!-- PROPERTIES -->
-
-      <div class="property-card">
-
-        <h3>
-          Properties
-        </h3>
+        <div class="nanny-price">
+          50 000 F CFA
+        </div>
 
         <p>
-          Property opportunities currently
-          available through the agency.
+          Nounou avec services de ménage
+          disponible à Grand-Bassam,
+          secteur Mockeville.
         </p>
 
-        <span class="availability">
-          3 Properties Available
+        <a
+          href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l'offre%20Nounou%20%2F%20M%C3%A9nage%20%C3%A0%20Mockeville%20%C3%A0%2050%20000%20F%20CFA."
+          class="nanny-apply"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Je suis intéressé(e)
+        </a>
+
+      </div>
+
+      <!-- MARK MIRMONT -->
+
+      <div class="nanny-card">
+
+        <span class="nanny-badge">
+          Disponible
         </span>
 
-        <br>
-
-        <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%203%20available%20properties."
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask About Properties
-        </a>
-
-      </div>
-
-
-      <!-- RENTALS -->
-
-      <div class="property-card">
-
         <h3>
-          Rental Houses
+          Ménage & Cuisine
         </h3>
 
+        <div class="nanny-location">
+          📍 Mark Mirmont
+        </div>
+
+        <div class="nanny-price">
+          40 000 F CFA
+        </div>
+
         <p>
-          Rental opportunities currently
-          available through the agency.
+          Offre pour le ménage et la cuisine.
         </p>
 
-        <span class="availability">
-          10 Rentals Available
+        <ul class="nanny-details">
+          <li>Montée / descente</li>
+          <li>Pas de lavage des vêtements</li>
+          <li>Machine à laver disponible</li>
+          <li>Nombre de personnes : Monsieur et Madame</li>
+        </ul>
+
+        <a
+          href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l'offre%20M%C3%A9nage%20%26%20Cuisine%20%C3%A0%20Mark%20Mirmont%20%C3%A0%2040%20000%20F%20CFA."
+          class="nanny-apply"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Je suis intéressé(e)
+        </a>
+
+      </div>
+
+      <!-- YAOÜ -->
+
+      <div class="nanny-card">
+
+        <span class="nanny-badge">
+          Disponible
         </span>
 
-      </div>
+        <h3>
+          Ménage & Cuisine
+        </h3>
 
-    </div>
+        <div class="nanny-location">
+          📍 Yaou
+        </div>
 
-
-    <!-- RENTAL CATEGORIES -->
-
-    <div
-      class="section-title"
-      style="margin-top: 55px; margin-bottom: 25px;"
-    >
-
-      <small>
-        Rental Categories
-      </small>
-
-      <h2>
-        What Are You Looking For?
-      </h2>
-
-      <p>
-        Contact us directly for current
-        availability and rental details.
-      </p>
-
-    </div>
-
-
-    <div class="rental-categories">
-
-
-      <!-- STUDIO -->
-
-      <div class="rental-category">
-
-        <h4>
-          Studio
-        </h4>
+        <div class="nanny-price">
+          50 000 F CFA
+        </div>
 
         <p>
-          Rental availability
+          Offre de ménage et de cuisine
+          disponible vers Yaou.
         </p>
 
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%20Studio%20for%20rent."
-          class="btn btn-primary"
+          href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l'offre%20M%C3%A9nage%20%26%20Cuisine%20vers%20Yaou%20%C3%A0%2050%20000%20F%20CFA."
+          class="nanny-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ask on WhatsApp
-        </a>
-
-      </div>
-
-
-      <!-- ROOM -->
-
-      <div class="rental-category">
-
-        <h4>
-          Room
-        </h4>
-
-        <p>
-          Rental availability
-        </p>
-
-        <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%20Room%20for%20rent."
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp
-        </a>
-
-      </div>
-
-
-      <!-- 2 BEDROOMS -->
-
-      <div class="rental-category">
-
-        <h4>
-          2 Bedrooms
-        </h4>
-
-        <p>
-          Rental availability
-        </p>
-
-        <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%202-bedroom%20house%20for%20rent."
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp
-        </a>
-
-      </div>
-
-
-      <!-- 3 BEDROOMS -->
-
-      <div class="rental-category">
-
-        <h4>
-          3 Bedrooms
-        </h4>
-
-        <p>
-          Rental availability
-        </p>
-
-        <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20looking%20for%20a%203-bedroom%20house%20for%20rent."
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp
+          Je suis intéressé(e)
         </a>
 
       </div>
@@ -1109,63 +897,8 @@
 
   </section>
 
-
   <!-- =========================
-       DRY CLEANING
-  ========================== -->
-
-  <section
-    class="dry-cleaning"
-    id="dry-cleaning"
-  >
-
-    <div class="section-title">
-
-      <small>
-        Service 02
-      </small>
-
-      <h2>
-        Dry Cleaning
-      </h2>
-
-      <p>
-        Professional dry cleaning information
-        will be provided as services and
-        availability are confirmed.
-      </p>
-
-    </div>
-
-
-    <div class="dry-cleaning-box">
-
-      <h3>
-        Dry Cleaning Service
-      </h3>
-
-      <p>
-        Interested in our dry cleaning service?
-        Contact YANN GOLDEN AGENCY directly
-        for current information.
-      </p>
-
-      <a
-        href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20would%20like%20information%20about%20Dry%20Cleaning."
-        class="btn btn-primary"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ask About Dry Cleaning
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       JOBS
+       EMPLOIS
   ========================== -->
 
   <section
@@ -1176,110 +909,108 @@
     <div class="section-title">
 
       <small>
-        Opportunities
+        Opportunités
       </small>
 
       <h2>
-        Available Jobs
+        Emplois disponibles
       </h2>
 
       <p>
-        Current employment opportunities
-        available through YANN GOLDEN AGENCY.
+        Consultez les opportunités d'emploi
+        actuellement disponibles auprès de
+        YANN GOLDEN AGENCY.
       </p>
 
     </div>
 
-
     <div class="jobs-grid">
 
-
-      <!-- WASHER -->
+      <!-- LAVEUR -->
 
       <div class="job-card">
 
         <span class="job-badge">
-          6 Positions Available
+          6 postes disponibles
         </span>
 
         <h3>
-          Washer
+          Laveur
         </h3>
 
         <p>
-          Washer positions are currently
-          available. Contact the agency
-          for more information.
+          Des postes de laveur sont actuellement
+          disponibles. Contactez l'agence pour
+          plus d'informations.
         </p>
 
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Washer%20job."
+          href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20poste%20de%20Laveur."
           class="job-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Apply on WhatsApp
+          Postuler sur WhatsApp
         </a>
 
       </div>
 
-
-      <!-- HOUSEMAID -->
+      <!-- FEMME DE MÉNAGE -->
 
       <div class="job-card">
 
         <span class="job-badge">
-          Available
+          Disponible
         </span>
 
         <h3>
-          Housemaid
+          Femme de ménage
         </h3>
 
         <p>
-          Housemaid opportunity available
-          through YANN GOLDEN AGENCY.
-          Contact us for requirements
-          and details.
+          Opportunité de femme de ménage
+          disponible auprès de YANN GOLDEN
+          AGENCY. Contactez-nous pour les
+          conditions et les détails.
         </p>
 
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Housemaid%20job."
+          href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20poste%20de%20Femme%20de%20m%C3%A9nage."
           class="job-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Apply on WhatsApp
+          Postuler sur WhatsApp
         </a>
 
       </div>
 
-
-      <!-- BABY KEEPER -->
+      <!-- NOUNOU -->
 
       <div class="job-card">
 
         <span class="job-badge">
-          Available
+          Disponible
         </span>
 
         <h3>
-          Baby Keeper
+          Nounou
         </h3>
 
         <p>
-          Baby keeper opportunity available.
-          Contact the agency for requirements
-          and further information.
+          Opportunité de nounou disponible.
+          Contactez l'agence pour connaître
+          les conditions et obtenir plus
+          d'informations.
         </p>
 
         <a
-          href="https://wa.me/2250749382707?text=Hello%20YANN%20GOLDEN%20AGENCY%2C%20I%20am%20interested%20in%20the%20Baby%20Keeper%20job."
+          href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20poste%20de%20Nounou."
           class="job-apply"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Apply on WhatsApp
+          Postuler sur WhatsApp
         </a>
 
       </div>
@@ -1288,9 +1019,8 @@
 
   </section>
 
-
   <!-- =========================
-       ABOUT
+       À PROPOS
   ========================== -->
 
   <section id="about">
@@ -1300,7 +1030,7 @@
       <div class="section-title">
 
         <small>
-          About Us
+          À propos
         </small>
 
         <h2>
@@ -1310,17 +1040,76 @@
       </div>
 
       <p>
-        YANN GOLDEN AGENCY is based in
+        YANN GOLDEN AGENCY est basée à
         Grand-Bassam, Côte d'Ivoire.
-        Our goal is to provide reliable,
-        professional and convenient agency
-        services for our clients.
+        Notre objectif est de proposer des
+        services fiables, professionnels et
+        pratiques pour répondre aux besoins
+        de nos clients.
       </p>
 
     </div>
 
   </section>
 
+  <!-- =========================
+       LOCATION
+  ========================== -->
+
+  <section
+    class="rental"
+    id="rental"
+  >
+
+    <div class="section-title">
+
+      <small>
+        Location
+      </small>
+
+      <h2>
+        Trouvez votre prochain logement
+      </h2>
+
+      <p>
+        Les informations sur les logements
+        disponibles seront mises à jour dès
+        que les propriétés et les prix officiels
+        seront confirmés.
+      </p>
+
+    </div>
+
+    <div class="rental-box">
+
+      <h3>
+        Informations sur les locations
+      </h3>
+
+      <div class="rental-price">
+        Bientôt disponible
+      </div>
+
+      <p class="rental-note">
+        Contactez YANN GOLDEN AGENCY pour
+        connaître les disponibilités et les
+        informations actuelles sur les locations.
+      </p>
+
+      <br>
+
+      <a
+        href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20voudrais%20avoir%20des%20informations%20sur%20les%20logements%20%C3%A0%20louer."
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Demander des informations
+      </a>
+
+    </div>
+
+  </section>
 
   <!-- =========================
        CONTACT
@@ -1334,22 +1123,21 @@
     <div class="section-title">
 
       <small>
-        Get In Touch
+        Contact
       </small>
 
       <h2>
-        Let's Talk
+        Parlons-en
       </h2>
 
       <p>
-        Interested in a property, rental,
-        dry cleaning service, agency service
-        or job opportunity?
-        Contact YANN GOLDEN AGENCY.
+        Vous êtes intéressé(e) par un logement,
+        une location, un service d'agence,
+        une offre de ménage ou une opportunité
+        d'emploi ? Contactez YANN GOLDEN AGENCY.
       </p>
 
     </div>
-
 
     <div class="contact-buttons">
 
@@ -1366,13 +1154,12 @@
         href="tel:+2250749382707"
         class="btn btn-secondary"
       >
-        Call Us
+        Appeler
       </a>
 
     </div>
 
   </section>
-
 
   <!-- =========================
        FOOTER
@@ -1383,7 +1170,7 @@
     <p>
       © 2026
       <strong>YANN GOLDEN AGENCY</strong>.
-      All rights reserved.
+      Tous droits réservés.
     </p>
 
     <p>
@@ -1391,7 +1178,6 @@
     </p>
 
   </footer>
-
 
   <!-- =========================
        JAVASCRIPT
@@ -1404,7 +1190,6 @@
 
     const navLinks =
       document.getElementById("navLinks");
-
 
     menuBtn.addEventListener(
       "click",
@@ -1426,10 +1211,11 @@
       }
     );
 
+    /* Fermer le menu mobile après avoir
+       cliqué sur un lien */
 
     const links =
       navLinks.querySelectorAll("a");
-
 
     links.forEach(
       function (link) {
