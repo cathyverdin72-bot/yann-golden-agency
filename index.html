@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>YANN GOLDEN AGENCY | Grand-Bassam</title>
-
   <meta
     name="description"
     content="YANN GOLDEN AGENCY — Immobilier, location, services d'agence, nounous, ménage et professionnels disponibles à Grand-Bassam, Côte d'Ivoire."
   >
-
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#d4af37">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="YANN GOLDEN">
+  <link rel="apple-touch-icon" href="/icon-192.png">
   <!-- =========================
        GOOGLE ANALYTICS
   ========================= -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N79GW89E5F"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
-
     gtag('js', new Date());
-
     gtag('config', 'G-N79GW89E5F');
   </script>
-
   <style>
     :root {
       --navy: #071525;
@@ -41,33 +40,27 @@
       --muted: #68717b;
       --border: #e4e6e8;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--white);
       color: var(--text);
       line-height: 1.6;
     }
-
     a {
       text-decoration: none;
       color: inherit;
     }
-
     /* =========================
        NAVBAR
     ========================= */
-
     .navbar {
       position: sticky;
       top: 0;
@@ -81,26 +74,22 @@
       padding: 12px 20px;
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-
     .brand-logo {
       width: 44px;
       height: 44px;
       object-fit: contain;
     }
-
     .brand-name {
       color: var(--gold);
       font-size: 16px;
       font-weight: 800;
       letter-spacing: 1px;
     }
-
     .menu-btn {
       border: none;
       background: transparent;
@@ -109,7 +98,6 @@
       cursor: pointer;
       display: block;
     }
-
     .nav-links {
       display: none;
       position: absolute;
@@ -121,26 +109,21 @@
       flex-direction: column;
       gap: 4px;
     }
-
     .nav-links.active {
       display: flex;
     }
-
     .nav-links a {
       color: var(--white);
       padding: 12px 8px;
       border-bottom: 1px solid rgba(255,255,255,0.08);
       font-size: 14px;
     }
-
     .nav-links a:hover {
       color: var(--gold);
     }
-
     /* =========================
        HERO
     ========================= */
-
     .hero {
       min-height: 78vh;
       background:
@@ -157,35 +140,29 @@
       text-align: center;
       padding: 70px 20px;
     }
-
     .hero-content {
       max-width: 750px;
     }
-
     .hero small {
       color: var(--gold-light);
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
     .hero h1 {
       font-size: clamp(36px, 9vw, 68px);
       line-height: 1.05;
       margin: 15px 0;
     }
-
     .hero h1 span {
       color: var(--gold);
     }
-
     .hero p {
       color: #dce3ea;
       max-width: 650px;
       margin: 0 auto 28px;
       font-size: 17px;
     }
-
     .hero-buttons {
       display: flex;
       flex-direction: column;
@@ -193,7 +170,6 @@
       max-width: 350px;
       margin: auto;
     }
-
     .btn {
       display: inline-block;
       padding: 14px 22px;
@@ -201,67 +177,71 @@
       font-weight: 700;
       transition: 0.25s ease;
       text-align: center;
+      cursor: pointer;
+      border: none;
+      font-size: 15px;
+      font-family: inherit;
     }
-
     .btn-gold {
       background: var(--gold);
       color: var(--navy);
     }
-
     .btn-gold:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
     }
-
     .btn-outline {
       border: 1px solid var(--gold);
       color: var(--gold);
+      background: transparent;
     }
-
     .btn-outline:hover {
       background: var(--gold);
       color: var(--navy);
     }
-
+    /* PWA INSTALL BUTTON */
+    #installAppBtn {
+      display: none;
+      width: 100%;
+    }
+    .install-note {
+      display: none;
+      margin-top: 12px;
+      color: #cbd5df;
+      font-size: 13px;
+      line-height: 1.5;
+    }
     /* =========================
        GENERAL SECTIONS
     ========================= */
-
     section {
       padding: 70px 20px;
     }
-
     .section-title {
       text-align: center;
       max-width: 700px;
       margin: 0 auto 40px;
     }
-
     .section-title small {
       color: var(--gold);
       text-transform: uppercase;
       font-weight: 800;
       letter-spacing: 1.5px;
     }
-
     .section-title h2 {
       font-size: 32px;
       color: var(--navy);
       margin: 8px 0 12px;
     }
-
     .section-title p {
       color: var(--muted);
     }
-
     /* =========================
        SERVICES
     ========================= */
-
     .services {
       background: var(--light);
     }
-
     .service-grid {
       max-width: 1100px;
       margin: auto;
@@ -269,7 +249,6 @@
       grid-template-columns: 1fr;
       gap: 20px;
     }
-
     .service-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -277,43 +256,34 @@
       padding: 28px;
       transition: 0.25s ease;
     }
-
     .service-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
-
     .service-icon {
       font-size: 32px;
       margin-bottom: 12px;
     }
-
     .service-card h3 {
       color: var(--navy);
       margin-bottom: 8px;
     }
-
     .service-card p {
       color: var(--muted);
     }
-
     /* =========================
        PROFESSIONALS
     ========================= */
-
     .professionals {
       background: var(--navy);
       color: var(--white);
     }
-
     .professionals .section-title h2 {
       color: var(--white);
     }
-
     .professionals .section-title p {
       color: #c7d0d9;
     }
-
     .professionals-intro {
       max-width: 850px;
       margin: 0 auto 35px;
@@ -323,18 +293,15 @@
       padding: 24px;
       text-align: center;
     }
-
     .professionals-intro h3 {
       color: var(--gold);
       margin-bottom: 8px;
       font-size: 22px;
     }
-
     .professionals-intro p {
       color: #d5dde5;
       margin-bottom: 18px;
     }
-
     .profession-grid {
       max-width: 1100px;
       margin: auto;
@@ -342,7 +309,6 @@
       grid-template-columns: 1fr;
       gap: 14px;
     }
-
     .profession-card {
       background: var(--white);
       color: var(--text);
@@ -355,18 +321,15 @@
       border: 1px solid transparent;
       transition: 0.25s ease;
     }
-
     .profession-card:hover {
       border-color: var(--gold);
       transform: translateY(-2px);
     }
-
     .profession-info {
       display: flex;
       align-items: center;
       gap: 13px;
     }
-
     .profession-icon {
       width: 45px;
       height: 45px;
@@ -378,17 +341,14 @@
       justify-content: center;
       font-size: 22px;
     }
-
     .profession-card h3 {
       font-size: 16px;
       margin-bottom: 2px;
     }
-
     .profession-card p {
       font-size: 13px;
       color: var(--muted);
     }
-
     .order-btn {
       background: var(--gold);
       color: var(--navy);
@@ -398,11 +358,9 @@
       font-weight: 800;
       white-space: nowrap;
     }
-
     .order-btn:hover {
       background: var(--gold-light);
     }
-
     .professional-note {
       max-width: 900px;
       margin: 30px auto 0;
@@ -410,15 +368,12 @@
       color: #bfcbd5;
       font-size: 13px;
     }
-
     /* =========================
        NANNIES
     ========================= */
-
     .nannies {
       background: var(--light);
     }
-
     .nanny-grid {
       max-width: 1100px;
       margin: auto;
@@ -426,7 +381,6 @@
       grid-template-columns: 1fr;
       gap: 20px;
     }
-
     .nanny-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -434,7 +388,6 @@
       padding: 25px;
       box-shadow: 0 5px 18px rgba(0,0,0,0.04);
     }
-
     .nanny-badge {
       display: inline-block;
       background: #e8f5e9;
@@ -445,34 +398,28 @@
       font-weight: 800;
       margin-bottom: 12px;
     }
-
     .nanny-card h3 {
       color: var(--navy);
       margin-bottom: 7px;
     }
-
     .nanny-location {
       color: var(--muted);
       margin-bottom: 8px;
     }
-
     .nanny-price {
       color: var(--gold);
       font-size: 22px;
       font-weight: 900;
       margin-bottom: 12px;
     }
-
     .nanny-card p {
       color: var(--muted);
       margin-bottom: 12px;
     }
-
     .nanny-details {
       margin: 0 0 18px 20px;
       color: var(--muted);
     }
-
     .nanny-apply {
       display: inline-block;
       background: var(--navy);
@@ -482,20 +429,16 @@
       font-weight: 700;
       font-size: 13px;
     }
-
     .nanny-apply:hover {
       background: var(--gold);
       color: var(--navy);
     }
-
     /* =========================
        JOBS
     ========================= */
-
     .jobs {
       background: var(--white);
     }
-
     .job-grid {
       max-width: 1000px;
       margin: auto;
@@ -503,23 +446,19 @@
       grid-template-columns: 1fr;
       gap: 18px;
     }
-
     .job-card {
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 23px;
       background: var(--white);
     }
-
     .job-card h3 {
       color: var(--navy);
       margin-bottom: 5px;
     }
-
     .job-card p {
       color: var(--muted);
     }
-
     .job-status {
       display: inline-block;
       margin-top: 12px;
@@ -530,57 +469,46 @@
       font-size: 12px;
       font-weight: 800;
     }
-
     /* =========================
        ABOUT
     ========================= */
-
     .about {
       background: var(--light);
     }
-
     .about-content {
       max-width: 850px;
       margin: auto;
       text-align: center;
     }
-
     .about-content p {
       color: var(--muted);
       margin-bottom: 14px;
     }
-
     /* =========================
        RENTAL
     ========================= */
-
     .rental {
       background: var(--navy);
       color: var(--white);
       text-align: center;
     }
-
     .rental h2 {
       color: var(--white);
       margin-bottom: 12px;
       font-size: 32px;
     }
-
     .rental p {
       color: #ccd5de;
       max-width: 700px;
       margin: 0 auto 20px;
     }
-
     /* =========================
        CONTACT
     ========================= */
-
     .contact {
       background: var(--white);
       text-align: center;
     }
-
     .contact-box {
       max-width: 700px;
       margin: auto;
@@ -588,17 +516,14 @@
       border-radius: 15px;
       padding: 30px 20px;
     }
-
     .contact-box h2 {
       color: var(--navy);
       margin-bottom: 10px;
     }
-
     .contact-box p {
       color: var(--muted);
       margin-bottom: 20px;
     }
-
     .whatsapp {
       display: inline-block;
       background: #25d366;
@@ -607,11 +532,9 @@
       border-radius: 8px;
       font-weight: 800;
     }
-
     /* =========================
        FOOTER
     ========================= */
-
     footer {
       background: #040d18;
       color: #9eabb8;
@@ -619,25 +542,19 @@
       padding: 25px 20px;
       font-size: 13px;
     }
-
     footer strong {
       color: var(--gold);
     }
-
     /* =========================
        DESKTOP
     ========================= */
-
     @media (min-width: 768px) {
-
       .navbar {
         padding: 12px 40px;
       }
-
       .menu-btn {
         display: none;
       }
-
       .nav-links {
         position: static;
         display: flex;
@@ -647,40 +564,36 @@
         background: transparent;
         gap: 4px;
       }
-
       .nav-links a {
         border: none;
         padding: 8px 10px;
       }
-
       .hero-buttons {
         flex-direction: row;
         justify-content: center;
         max-width: none;
+        flex-wrap: wrap;
       }
-
+      #installAppBtn {
+        width: auto;
+      }
       .service-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
       .profession-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .nanny-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
       .job-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-
     @media (min-width: 1100px) {
       .profession-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
       section {
         padding-left: 40px;
         padding-right: 40px;
@@ -688,27 +601,21 @@
     }
   </style>
 </head>
-
 <body>
-
   <!-- =========================
        NAVBAR
   ========================= -->
-
   <nav class="navbar">
-
     <div class="brand">
       <img
         src="logo.png"
         alt="Logo YANN GOLDEN AGENCY"
         class="brand-logo"
       >
-
       <div class="brand-name">
         YANN GOLDEN
       </div>
     </div>
-
     <button
       class="menu-btn"
       id="menuBtn"
@@ -717,198 +624,163 @@
     >
       ☰
     </button>
-
     <div class="nav-links" id="navLinks">
-
       <a href="#home">Accueil</a>
-
       <a href="#services">Services</a>
-
       <a href="#professionals">Professionnels</a>
-
       <a href="#nannies">Nounous & Ménage</a>
-
       <a href="#rental">Location</a>
-
       <a href="#jobs">Emplois</a>
-
       <a href="#about">À propos</a>
-
       <a href="#contact">Contact</a>
-
     </div>
-
   </nav>
-
-
   <!-- =========================
        HERO
   ========================= -->
-
   <header class="hero" id="home">
-
     <div class="hero-content">
-
-      <small>Grand-Bassam • Côte d'Ivoire</small>
-
+      <small>
+        Grand-Bassam • Côte d'Ivoire
+      </small>
       <h1>
         YANN <span>GOLDEN</span> AGENCY
       </h1>
-
       <p>
         Votre agence de proximité pour l'immobilier, la location,
         les services à domicile, les professionnels et les opportunités d'emploi.
       </p>
-
       <div class="hero-buttons">
-
-        <a href="#services" class="btn btn-gold">
+        <a
+          href="#services"
+          class="btn btn-gold"
+        >
           Découvrir nos services
         </a>
-
-        <a href="#professionals" class="btn btn-outline">
+        <a
+          href="#professionals"
+          class="btn btn-outline"
+        >
           Trouver un professionnel
         </a>
-
+        <button
+          id="installAppBtn"
+          class="btn btn-gold"
+          type="button"
+        >
+          📱 Installer l'application
+        </button>
       </div>
-
+      <div
+        id="installNote"
+        class="install-note"
+      ></div>
     </div>
-
   </header>
-
-
   <!-- =========================
        SERVICES
   ========================= -->
-
   <section class="services" id="services">
-
     <div class="section-title">
-
       <small>Nos services</small>
-
       <h2>
         Des solutions pour vos besoins
       </h2>
-
       <p>
         YANN GOLDEN AGENCY vous accompagne dans plusieurs domaines
         à Grand-Bassam et dans les environs.
       </p>
-
     </div>
-
-
     <div class="service-grid">
-
       <div class="service-card">
-
-        <div class="service-icon">🏠</div>
-
-        <h3>Immobilier</h3>
-
+        <div class="service-icon">
+          🏠
+        </div>
+        <h3>
+          Immobilier
+        </h3>
         <p>
           Recherche de logements, maisons, terrains et autres biens
           immobiliers selon vos besoins.
         </p>
-
       </div>
-
-
       <div class="service-card">
-
-        <div class="service-icon">🔑</div>
-
-        <h3>Location</h3>
-
+        <div class="service-icon">
+          🔑
+        </div>
+        <h3>
+          Location
+        </h3>
         <p>
           Découvrez nos opportunités de location et contactez-nous
           pour connaître les disponibilités.
         </p>
-
       </div>
-
-
       <div class="service-card">
-
-        <div class="service-icon">🤝</div>
-
-        <h3>Services d'agence</h3>
-
+        <div class="service-icon">
+          🤝
+        </div>
+        <h3>
+          Services d'agence
+        </h3>
         <p>
           Mise en relation avec des personnes et des professionnels
           disponibles pour différents besoins.
         </p>
-
       </div>
-
     </div>
-
   </section>
-
-
   <!-- =========================
        PROFESSIONALS
   ========================= -->
-
   <section class="professionals" id="professionals">
-
     <div class="section-title">
-
-      <small>Besoin d'aide ?</small>
-
+      <small>
+        Besoin d'aide ?
+      </small>
       <h2>
         Trouvez un professionnel
       </h2>
-
       <p>
         Besoin d'un professionnel pour un travail à la maison,
         au bureau, dans votre commerce ou sur votre véhicule ?
       </p>
-
     </div>
-
-
     <div class="professionals-intro">
-
       <h3>
         👨🏽‍🔧 Un travail professionnel à faire ?
       </h3>
-
       <p>
         Consultez la liste des professions disponibles,
         choisissez le service dont vous avez besoin et
         commandez directement auprès de YANN GOLDEN AGENCY.
       </p>
-
       <a
         href="#profession-list"
         class="btn btn-gold"
       >
         Voir la liste des professionnels
       </a>
-
     </div>
-
-
-    <div class="profession-grid" id="profession-list">
-
-
+    <div
+      class="profession-grid"
+      id="profession-list"
+    >
       <!-- 01 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">⚡</div>
-
-          <div>
-            <h3>Électricien</h3>
-            <p>Installation, dépannage et réparation électrique.</p>
+          <div class="profession-icon">
+            ⚡
           </div>
-
+          <div>
+            <h3>
+              Électricien
+            </h3>
+            <p>
+              Installation, dépannage et réparation électrique.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -917,25 +789,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 02 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🔧</div>
-
-          <div>
-            <h3>Plombier</h3>
-            <p>Fuites, robinets, canalisations et installations.</p>
+          <div class="profession-icon">
+            🔧
           </div>
-
+          <div>
+            <h3>
+              Plombier
+            </h3>
+            <p>
+              Fuites, robinets, canalisations et installations.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -944,25 +813,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 03 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🎨</div>
-
-          <div>
-            <h3>Peintre</h3>
-            <p>Peinture intérieure, extérieure et rénovation.</p>
+          <div class="profession-icon">
+            🎨
           </div>
-
+          <div>
+            <h3>
+              Peintre
+            </h3>
+            <p>
+              Peinture intérieure, extérieure et rénovation.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -971,25 +837,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 04 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">❄️</div>
-
-          <div>
-            <h3>Technicien climatisation</h3>
-            <p>Installation, entretien et réparation de climatiseurs.</p>
+          <div class="profession-icon">
+            ❄️
           </div>
-
+          <div>
+            <h3>
+              Technicien climatisation
+            </h3>
+            <p>
+              Installation, entretien et réparation de climatiseurs.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -998,25 +861,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 05 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🧱</div>
-
-          <div>
-            <h3>Maçon</h3>
-            <p>Construction, réparation et travaux de maçonnerie.</p>
+          <div class="profession-icon">
+            🧱
           </div>
-
+          <div>
+            <h3>
+              Maçon
+            </h3>
+            <p>
+              Construction, réparation et travaux de maçonnerie.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1025,25 +885,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 06 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🪚</div>
-
-          <div>
-            <h3>Menuisier</h3>
-            <p>Meubles, portes, placards et travaux sur mesure.</p>
+          <div class="profession-icon">
+            🪚
           </div>
-
+          <div>
+            <h3>
+              Menuisier
+            </h3>
+            <p>
+              Meubles, portes, placards et travaux sur mesure.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1052,25 +909,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 07 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🔩</div>
-
-          <div>
-            <h3>Soudeur</h3>
-            <p>Portails, grilles, structures métalliques et réparations.</p>
+          <div class="profession-icon">
+            🔩
           </div>
-
+          <div>
+            <h3>
+              Soudeur
+            </h3>
+            <p>
+              Portails, grilles, structures métalliques et réparations.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1079,25 +933,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 08 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🧹</div>
-
-          <div>
-            <h3>Agent de nettoyage</h3>
-            <p>Nettoyage de maisons, bureaux et espaces professionnels.</p>
+          <div class="profession-icon">
+            🧹
           </div>
-
+          <div>
+            <h3>
+              Agent de nettoyage
+            </h3>
+            <p>
+              Nettoyage de maisons, bureaux et espaces professionnels.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1106,25 +957,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 09 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🌳</div>
-
-          <div>
-            <h3>Jardinier</h3>
-            <p>Entretien des jardins, pelouses et espaces extérieurs.</p>
+          <div class="profession-icon">
+            🌳
           </div>
-
+          <div>
+            <h3>
+              Jardinier
+            </h3>
+            <p>
+              Entretien des jardins, pelouses et espaces extérieurs.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1133,25 +981,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 10 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🚗</div>
-
-          <div>
-            <h3>Mécanicien automobile</h3>
-            <p>Entretien, diagnostic et réparation de véhicules.</p>
+          <div class="profession-icon">
+            🚗
           </div>
-
+          <div>
+            <h3>
+              Mécanicien automobile
+            </h3>
+            <p>
+              Entretien, diagnostic et réparation de véhicules.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1160,25 +1005,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 11 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">💇🏽</div>
-
-          <div>
-            <h3>Coiffeur / Coiffeuse</h3>
-            <p>Coiffure à domicile ou sur rendez-vous.</p>
+          <div class="profession-icon">
+            💇🏽
           </div>
-
+          <div>
+            <h3>
+              Coiffeur / Coiffeuse
+            </h3>
+            <p>
+              Coiffure à domicile ou sur rendez-vous.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1187,25 +1029,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 12 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">👗</div>
-
-          <div>
-            <h3>Couturier / Couturière</h3>
-            <p>Confection, retouches et vêtements sur mesure.</p>
+          <div class="profession-icon">
+            👗
           </div>
-
+          <div>
+            <h3>
+              Couturier / Couturière
+            </h3>
+            <p>
+              Confection, retouches et vêtements sur mesure.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1214,25 +1053,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 13 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">📸</div>
-
-          <div>
-            <h3>Photographe</h3>
-            <p>Photos pour événements, portraits et occasions spéciales.</p>
+          <div class="profession-icon">
+            📸
           </div>
-
+          <div>
+            <h3>
+              Photographe
+            </h3>
+            <p>
+              Photos pour événements, portraits et occasions spéciales.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1241,25 +1077,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 14 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">📱</div>
-
-          <div>
-            <h3>Technicien informatique</h3>
-            <p>Ordinateurs, téléphones, logiciels et assistance technique.</p>
+          <div class="profession-icon">
+            📱
           </div>
-
+          <div>
+            <h3>
+              Technicien informatique
+            </h3>
+            <p>
+              Ordinateurs, téléphones, logiciels et assistance technique.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1268,25 +1101,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 15 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">📺</div>
-
-          <div>
-            <h3>Installateur TV / Satellite</h3>
-            <p>Installation de TV, antennes et équipements satellite.</p>
+          <div class="profession-icon">
+            📺
           </div>
-
+          <div>
+            <h3>
+              Installateur TV / Satellite
+            </h3>
+            <p>
+              Installation de TV, antennes et équipements satellite.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1295,25 +1125,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 16 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🚚</div>
-
-          <div>
-            <h3>Déménageur</h3>
-            <p>Aide au déménagement et au transport de vos affaires.</p>
+          <div class="profession-icon">
+            🚚
           </div>
-
+          <div>
+            <h3>
+              Déménageur
+            </h3>
+            <p>
+              Aide au déménagement et au transport de vos affaires.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1322,25 +1149,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 17 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🪟</div>
-
-          <div>
-            <h3>Vitrier</h3>
-            <p>Installation et remplacement de vitres et miroirs.</p>
+          <div class="profession-icon">
+            🪟
           </div>
-
+          <div>
+            <h3>
+              Vitrier
+            </h3>
+            <p>
+              Installation et remplacement de vitres et miroirs.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1349,25 +1173,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 18 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🛋️</div>
-
-          <div>
-            <h3>Décorateur</h3>
-            <p>Décoration intérieure et aménagement d'espaces.</p>
+          <div class="profession-icon">
+            🛋️
           </div>
-
+          <div>
+            <h3>
+              Décorateur
+            </h3>
+            <p>
+              Décoration intérieure et aménagement d'espaces.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1376,25 +1197,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 19 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">📦</div>
-
-          <div>
-            <h3>Livraison / Coursier</h3>
-            <p>Livraison de documents, colis et petits achats.</p>
+          <div class="profession-icon">
+            📦
           </div>
-
+          <div>
+            <h3>
+              Livraison / Coursier
+            </h3>
+            <p>
+              Livraison de documents, colis et petits achats.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1403,25 +1221,22 @@
         >
           Commander
         </a>
-
       </div>
-
-
       <!-- 20 -->
-
       <div class="profession-card">
-
         <div class="profession-info">
-
-          <div class="profession-icon">🪑</div>
-
-          <div>
-            <h3>Réparateur de meubles</h3>
-            <p>Réparation et restauration de meubles à domicile.</p>
+          <div class="profession-icon">
+            🪑
           </div>
-
+          <div>
+            <h3>
+              Réparateur de meubles
+            </h3>
+            <p>
+              Réparation et restauration de meubles à domicile.
+            </p>
+          </div>
         </div>
-
         <a
           class="order-btn"
           target="_blank"
@@ -1430,70 +1245,47 @@
         >
           Commander
         </a>
-
       </div>
-
     </div>
-
-
     <div class="professional-note">
-
       Les prestations, tarifs et disponibilités sont confirmés
       avec YANN GOLDEN AGENCY avant toute intervention.
-
     </div>
-
   </section>
-
-
   <!-- =========================
        NOUNOUS & MENAGE
   ========================= -->
-
   <section class="nannies" id="nannies">
-
     <div class="section-title">
-
-      <small>Disponibilités</small>
-
+      <small>
+        Disponibilités
+      </small>
       <h2>
         Nounous & Ménage
       </h2>
-
       <p>
         Découvrez les offres actuellement disponibles à Grand-Bassam
         et dans les environs.
       </p>
-
     </div>
-
-
     <div class="nanny-grid">
-
-
       <div class="nanny-card">
-
         <span class="nanny-badge">
           Disponible
         </span>
-
         <h3>
           Nounou / Ménage
         </h3>
-
         <div class="nanny-location">
           📍 Mockeville
         </div>
-
         <div class="nanny-price">
           50 000 F CFA
         </div>
-
         <p>
           Nounou avec services de ménage disponible à Grand-Bassam,
           secteur Mockeville.
         </p>
-
         <a
           href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l%27offre%20Nounou%20%2F%20M%C3%A9nage%20%C3%A0%20Mockeville%20%C3%A0%2050%20000%20F%20CFA."
           class="nanny-apply"
@@ -1502,44 +1294,37 @@
         >
           Je suis intéressé(e)
         </a>
-
       </div>
-
-
       <div class="nanny-card">
-
         <span class="nanny-badge">
           Disponible
         </span>
-
         <h3>
           Ménage & Cuisine
         </h3>
-
         <div class="nanny-location">
           📍 Mark Mirmont
         </div>
-
         <div class="nanny-price">
           40 000 F CFA
         </div>
-
         <p>
           Offre pour le ménage et la cuisine.
         </p>
-
         <ul class="nanny-details">
-
-          <li>Montée / descente</li>
-
-          <li>Pas de lavage des vêtements</li>
-
-          <li>Machine à laver disponible</li>
-
-          <li>Nombre de personnes : Monsieur et Madame</li>
-
+          <li>
+            Montée / descente
+          </li>
+          <li>
+            Pas de lavage des vêtements
+          </li>
+          <li>
+            Machine à laver disponible
+          </li>
+          <li>
+            Nombre de personnes : Monsieur et Madame
+          </li>
         </ul>
-
         <a
           href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l%27offre%20M%C3%A9nage%20%26%20Cuisine%20%C3%A0%20Mark%20Mirmont%20%C3%A0%2040%20000%20F%20CFA."
           class="nanny-apply"
@@ -1548,32 +1333,23 @@
         >
           Je suis intéressé(e)
         </a>
-
       </div>
-
-
       <div class="nanny-card">
-
         <span class="nanny-badge">
           Disponible
         </span>
-
         <h3>
           Ménage & Cuisine
         </h3>
-
         <div class="nanny-location">
           📍 Yaou
         </div>
-
         <div class="nanny-price">
           50 000 F CFA
         </div>
-
         <p>
           Offre de ménage et de cuisine disponible vers Yaou.
         </p>
-
         <a
           href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l%27offre%20M%C3%A9nage%20%26%20Cuisine%20vers%20Yaou%20%C3%A0%2050%20000%20F%20CFA."
           class="nanny-apply"
@@ -1582,150 +1358,101 @@
         >
           Je suis intéressé(e)
         </a>
-
       </div>
-
     </div>
-
   </section>
-
-
   <!-- =========================
        JOBS
   ========================= -->
-
   <section class="jobs" id="jobs">
-
     <div class="section-title">
-
-      <small>Opportunités</small>
-
+      <small>
+        Opportunités
+      </small>
       <h2>
         Emplois disponibles
       </h2>
-
       <p>
         Découvrez les opportunités actuellement disponibles
         auprès de YANN GOLDEN AGENCY.
       </p>
-
     </div>
-
-
     <div class="job-grid">
-
-
       <div class="job-card">
-
         <h3>
           Laveur
         </h3>
-
         <p>
           Poste disponible pour le lavage et l'entretien des véhicules.
         </p>
-
         <span class="job-status">
           6 postes disponibles
         </span>
-
       </div>
-
-
       <div class="job-card">
-
         <h3>
           Femme de ménage
         </h3>
-
         <p>
           Opportunité pour personne sérieuse et disponible.
         </p>
-
         <span class="job-status">
           Disponible
         </span>
-
       </div>
-
-
       <div class="job-card">
-
         <h3>
           Nounou
         </h3>
-
         <p>
           Opportunités de garde d'enfants et services à domicile.
         </p>
-
         <span class="job-status">
           Disponible
         </span>
-
       </div>
-
     </div>
-
   </section>
-
-
   <!-- =========================
        ABOUT
   ========================= -->
-
   <section class="about" id="about">
-
     <div class="section-title">
-
-      <small>Qui sommes-nous ?</small>
-
+      <small>
+        Qui sommes-nous ?
+      </small>
       <h2>
         YANN GOLDEN AGENCY
       </h2>
-
     </div>
-
-
     <div class="about-content">
-
       <p>
         YANN GOLDEN AGENCY est une agence de proximité basée à
         Grand-Bassam, en Côte d'Ivoire.
       </p>
-
       <p>
         Notre objectif est de faciliter la mise en relation entre
         les personnes à la recherche d'un service, d'un logement,
         d'un emploi ou d'un professionnel fiable.
       </p>
-
       <p>
         Vous avez un besoin ? Contactez-nous et nous vous aiderons
         à trouver une solution adaptée.
       </p>
-
     </div>
-
   </section>
-
-
   <!-- =========================
        RENTAL
   ========================= -->
-
   <section class="rental" id="rental">
-
     <h2>
       Location & Immobilier
     </h2>
-
     <p>
       Vous cherchez une maison, un appartement, un terrain ou
       une opportunité de location à Grand-Bassam ?
       Contactez-nous pour connaître les biens disponibles.
     </p>
-
     <a
       href="https://wa.me/2250749382707?text=Bonjour%20YANN%20GOLDEN%20AGENCY%2C%20je%20cherche%20un%20bien%20immobilier%20ou%20une%20location%20%C3%A0%20Grand-Bassam."
       class="btn btn-gold"
@@ -1734,28 +1461,20 @@
     >
       Nous contacter
     </a>
-
   </section>
-
-
   <!-- =========================
        CONTACT
   ========================= -->
-
   <section class="contact" id="contact">
-
     <div class="contact-box">
-
       <h2>
         Besoin d'un service ?
       </h2>
-
       <p>
         Écrivez-nous directement sur WhatsApp pour obtenir
         des informations, demander un professionnel ou
         connaître les disponibilités.
       </p>
-
       <a
         href="https://wa.me/2250749382707"
         class="whatsapp"
@@ -1764,78 +1483,149 @@
       >
         💬 WhatsApp : 07 49 38 27 07
       </a>
-
     </div>
-
   </section>
-
-
   <!-- =========================
        FOOTER
   ========================= -->
-
   <footer>
-
     <p>
       © 2026 <strong>YANN GOLDEN AGENCY</strong>.
       Tous droits réservés.
     </p>
-
     <p>
       Grand-Bassam, Côte d'Ivoire
     </p>
-
   </footer>
-
-
   <!-- =========================
        JAVASCRIPT
   ========================= -->
-
   <script>
-
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-
-    menuBtn.addEventListener("click", function () {
-
-      navLinks.classList.toggle("active");
-
-      const isOpen =
-        navLinks.classList.contains("active");
-
-      menuBtn.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
-
-      menuBtn.textContent =
-        isOpen ? "✕" : "☰";
-
-    });
-
-
-    const links =
-      navLinks.querySelectorAll("a");
-
-    links.forEach(function (link) {
-
-      link.addEventListener("click", function () {
-
-        navLinks.classList.remove("active");
-
+    /* =========================
+       MOBILE MENU
+    ========================= */
+    const menuBtn =
+      document.getElementById("menuBtn");
+    const navLinks =
+      document.getElementById("navLinks");
+    menuBtn.addEventListener(
+      "click",
+      function () {
+        navLinks.classList.toggle("active");
+        const isOpen =
+          navLinks.classList.contains("active");
         menuBtn.setAttribute(
           "aria-expanded",
-          "false"
+          isOpen
         );
-
-        menuBtn.textContent = "☰";
-
-      });
-
+        menuBtn.textContent =
+          isOpen ? "✕" : "☰";
+      }
+    );
+    const links =
+      navLinks.querySelectorAll("a");
+    links.forEach(function (link) {
+      link.addEventListener(
+        "click",
+        function () {
+          navLinks.classList.remove("active");
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+          menuBtn.textContent = "☰";
+        }
+      );
     });
-
+    /* =========================
+       PWA INSTALLATION
+    ========================= */
+    let deferredPrompt = null;
+    const installAppBtn =
+      document.getElementById("installAppBtn");
+    const installNote =
+      document.getElementById("installNote");
+    /*
+      Android / Chrome
+      The browser sends this event when the
+      website meets the installation requirements.
+    */
+    window.addEventListener(
+      "beforeinstallprompt",
+      function (event) {
+        event.preventDefault();
+        deferredPrompt = event;
+        installAppBtn.style.display =
+          "inline-block";
+      }
+    );
+    /*
+      User taps INSTALL
+    */
+    installAppBtn.addEventListener(
+      "click",
+      async function () {
+        if (!deferredPrompt) {
+          /*
+            iPhone / Safari or a browser that
+            doesn't expose the install prompt.
+          */
+          installNote.style.display =
+            "block";
+          installNote.innerHTML =
+            "Sur iPhone : appuyez sur le bouton Partager de Safari, puis choisissez « Sur l'écran d'accueil ».";
+          return;
+        }
+        deferredPrompt.prompt();
+        const result =
+          await deferredPrompt.userChoice;
+        console.log(
+          "Résultat installation :",
+          result.outcome
+        );
+        deferredPrompt = null;
+        installAppBtn.style.display =
+          "none";
+      }
+    );
+    /*
+      Installation completed
+    */
+    window.addEventListener(
+      "appinstalled",
+      function () {
+        console.log(
+          "YANN GOLDEN AGENCY est installé."
+        );
+        installAppBtn.style.display =
+          "none";
+        installNote.style.display =
+          "none";
+      }
+    );
+    /*
+      Register Service Worker
+    */
+    if ("serviceWorker" in navigator) {
+      window.addEventListener(
+        "load",
+        function () {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function () {
+              console.log(
+                "Service Worker enregistré."
+              );
+            })
+            .catch(function (error) {
+              console.error(
+                "Erreur Service Worker :",
+                error
+              );
+            });
+        }
+      );
+    }
   </script>
-
 </body>
-</html></html></html>
+</html>
